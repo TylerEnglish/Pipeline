@@ -1,0 +1,27 @@
+name: Deployment
+on:
+  push:
+    paths:
+      - main.py
+  schedule:
+    - cron: 0 0 * * 0
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:
+          - 3.12
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          pip install -r ./docs/requirements.txt
+      - name: Deploy Application
+        run: |
+          python main.py 
+    
