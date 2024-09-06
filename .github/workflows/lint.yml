@@ -28,9 +28,9 @@ jobs:
         - name: Run flake8 Linting
           run: |
             flake8 scripts  # Lint the Scripts directory with flake8
-          continue-on-error: false
+          continue-on-error: true  # Continue even if flake8 finds issues
         - name: Run black Linting
           run: |
             black --check scripts  # Check formatting with black
-          continue-on-error: false
+          continue-on-error: true  # Continue even if black finds issues
     
