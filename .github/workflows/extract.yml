@@ -20,4 +20,4 @@ jobs:
           pip install -r ./docs/requirements.txt
       - name: Run Data Extraction
         run: |
-          python ./scripts/data_processing.py --extract
+          python ./scripts/processing.py --extract
