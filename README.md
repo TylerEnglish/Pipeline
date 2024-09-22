@@ -20,7 +20,6 @@ The project is organized into several directories, each serving a specific purpo
   - `test.yml`: Runs unit and integration tests automatically.
   - `extract.yml`: Automates data extraction workflow.
   - `push.yml`: Handles deployment tasks.
-  - `lint.yml`: Checks code quality using linters.
 
 - **raw_data/**: Contains raw data files and instructions.
   - `README.md`: Instructions for handling raw data.
@@ -95,18 +94,14 @@ The `Template_Pipeline` is designed to automate data processing, model training,
 2. **Model Training**: The `training.py` script is responsible for training machine learning models using the processed data. It can be customized to fit different algorithms and model architectures.
 
 3. **Testing**: The `test/` directory contains unit and integration tests to ensure the code quality and functionality. The tests are run automatically using GitHub Actions (see `.github/workflows/test.yml`).
-
-4. **Code Quality Checks**: The `lint.yml` workflow runs linters like `flake8` and `black` to maintain code quality and consistency.
-
-5. **Deployment**: The `push.yml` workflow defines the steps for deploying the trained models or applications.
+  
+4. **Deployment**: The `push.yml` workflow defines the steps for deploying the trained models or applications.
 
 ## Security Considerations
 
 - **Environment Variables**: Sensitive information such as database credentials, API keys, and secret keys should be stored in environment variables. Use the `.env.example` file as a template, and do not commit the `.env` file to version control.
 
 - **Access Control**: Ensure that only authorized users have access to the repository, especially when it contains sensitive data or credentials.
-
-- **Code Quality and Security**: Utilize linters and security checks (`flake8`, `bandit`, etc.) to identify potential vulnerabilities and ensure code quality.
 
 - **Data Security**: Be mindful of the size and sensitivity of data files. Avoid committing large files directly into the repository. Consider using external storage solutions for large datasets.
 
