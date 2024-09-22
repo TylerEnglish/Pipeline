@@ -2,8 +2,8 @@ name: Run Tests
 on:
   push:
     paths:
-      - Scripts/**
-      - Test/**
+      - scripts/**
+      - test/**
       - main.py
   pull_request:
     paths:
