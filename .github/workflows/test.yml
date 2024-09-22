@@ -7,8 +7,8 @@ on:
       - main.py
   pull_request:
     paths:
-      - Scripts/**
-      - Test/**
+      - scripts/**
+      - test/**
       - main.py
 jobs:
   test:
