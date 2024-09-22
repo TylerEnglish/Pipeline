@@ -9,9 +9,7 @@ This directory contains processed data files that are generated as outputs from 
 ## Guidelines
 
 1. **Data Format**: All processed data should be in approated formats and maintain consistency with naming conventions and schema.
-2. **Version Control**: Keep track of different versions of the processed data files. Include version information in the file names or maintain a changelog.
-3. **Documentation**: Any processing steps, transformations, or filters applied to the raw data should be well-documented in the corresponding pipeline script and the `CHANGELOG.md` file.
-4. **Updating Data**: If the processed data files are updated, document the changes, including the date and a brief description of the modifications.
+2. **Updating Data**: If the processed data files are updated, document the changes, including the date and a brief description of the modifications.
 
 ## Usage
 
